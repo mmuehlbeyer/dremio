@@ -5,7 +5,7 @@ a short description how to deploy a 3 node dremio cluster with ansible
 
 ### some prerequisits 
 #### rpm adaption
-copy a current dremio rpm into the roles/common/files e.g. dremio-community-4.2.2-202004211133290458_b550b6fa_1.noarch.rpm
+copy a current dremio rpm into the roles/common/files e.g. dremio-community-<version>.noarch.rpm
 
 adapt the main.yml in roles/common/tasks to the new file name
 
