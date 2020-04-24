@@ -1,1 +1,4 @@
-collection for configuring dremio
+collection for configuring dremio on prem
+
+for ansible playbook README see the file in ansible subdirectory
+
