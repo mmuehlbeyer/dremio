@@ -10,7 +10,7 @@ copy a current dremio rpm into the roles/common/files e.g. dremio-community-....
 adapt the main.yml in roles/common/tasks to the new file name
 
 
-### hostname adjustment
+#### hostname adjustment
 
 adapt the hostnames and IP adresses in hosts file to your enviroment
 
