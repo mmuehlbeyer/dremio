@@ -1,6 +1,7 @@
-## prerquisites
+## Deploying a three node dremio cluster on prem
 
-### rpm adaption
+### some prerequisits 
+#### rpm adaption
 copy a current dremio rpm into the roles/common/files
 e.g. dremio-community-4.2.2-202004211133290458_b550b6fa_1.noarch.rpm
 
