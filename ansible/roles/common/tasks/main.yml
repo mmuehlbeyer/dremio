@@ -1,2 +1,26 @@
 ---
 # tasks file for common
+
+- name: Add IP address of all hosts to all hosts
+  lineinfile:
+    dest: /etc/hosts
+    regexp: '.*{{ item }}$'
+    line: "{{ hostvars[item].ansible_host }} {{item}}"
+    state: present
+  when: hostvars[item].ansible_host is defined
+  with_items: "{{ groups.all }}"
+
+
+- name: mkdir /tmp/rpms
+  file: path=/tmp/rpms state=directory
+
+- name: send rpms to all hosts
+  copy:
+   src: "dremio-community-4.2.2-202004211133290458_b550b6fa_1.noarch.rpm"
+   dest: /tmp/rpms
+
+- name: Install the rpms
+  yum:
+     name: /tmp/rpms/dremio-community-4.2.2-202004211133290458_b550b6fa_1.noarch.rpm
+     state: present
+

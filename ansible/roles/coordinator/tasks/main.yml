@@ -1,2 +1,12 @@
 ---
 # tasks file for coordinator
+
+- name: send config to coordinator
+  copy:
+   src: "dremio.conf"
+   dest: /etc/dremio
+
+- name: start dremio
+  systemd:
+    name: dremio
+    state: started

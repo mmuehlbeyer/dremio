@@ -1,0 +1,11 @@
+- hosts: all
+  roles:
+  - role: common
+
+- hosts: dremio_coordinator
+  roles:
+  - role: coordinator
+
+- hosts: dremio_executor
+  roles:
+  - role: executor

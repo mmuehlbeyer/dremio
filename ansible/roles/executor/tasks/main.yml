@@ -1,2 +1,12 @@
 ---
 # tasks file for executor
+
+- name: send config to executor
+  copy:
+   src: "dremio.conf"
+   dest: /etc/dremio
+
+- name: start dremio
+  systemd:
+    name: dremio
+    state: started

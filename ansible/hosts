@@ -1,0 +1,14 @@
+[dremio_servers]
+dremio01 ansible_host=192.168.2.48
+dremio02 ansible_host=192.168.2.49
+dremio03 ansible_host=192.168.2.50
+
+[dremio_coordinator]
+dremio01 ansible_host=192.168.2.48
+
+[dremio_executor]
+dremio02 ansible_host=192.168.2.49
+dremio03 ansible_host=192.168.2.50
+
+[zookeeper]
+dremio01 ansible_host=192.168.2.48
