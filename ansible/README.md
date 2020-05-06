@@ -2,6 +2,8 @@
 
 a short description how to deploy a 3 node dremio cluster with ansible
 
+hosts are split in coordinator and executor roles
+
 dremio01 is used as coordinator host
 dremio02 and dremio03 are executor nodes
 
