@@ -2,6 +2,10 @@
 
 a short description how to deploy a 3 node dremio cluster with ansible
 
+dremio01 is used as coordinator host
+dremio02 and dremio03 are executor nodes
+
+zookeeper runs on dremio01
 
 ### some prerequisits 
 #### rpm adaption
